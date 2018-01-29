@@ -1,0 +1,350 @@
+@media screen and (max-width: 1796px) {
+    .logo h1 {
+        font-size: 110px;
+    }
+    .logo h2 {
+        font-size: 70px;
+    }
+    .fa-4x {
+        font-size: 60px !important;
+    }
+    .programA_content{
+        flex-wrap: wrap;
+    }
+    .boxnum{
+        width: 100%;
+        top:90px;
+    }
+    .level ul{
+        padding: 0;
+    }
+    .programB p {
+        font-size: 30px;
+    }
+    .discountsImg h2,
+    .orangeImg h2,
+    .boxImg h2,
+    .farmerImg h2,
+    .aboutImg h2 {
+        font-size: 110px;
+        width: 450px;  
+    }
+
+    .orange_img {
+        width: 255px;
+    }
+    .orange_intro {
+        width: 500px;
+    }
+    .orange_intro h4 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+    .orange_intro p {
+        font-size: 28px;
+    }
+
+    .farmer-title h3 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 1389px) {
+    .fa-4x {
+        font-size: 50px !important;
+    }
+    .logo a ,.logo button{
+        margin-right: 30px;
+        left: 26%;
+    }
+    .orange_img {
+        width: 250px;
+    }
+    .orange_intro {
+        width: 400px;
+    }
+    .orange_intro h4 {
+        font-size: 43px;
+        margin-bottom: 17px;
+    }
+    .orange_intro p {
+        font-size: 26px;
+    }
+    .box_level{
+        margin-left: 100px;
+    } 
+    .box_price{
+        margin-left: 30px;
+    }
+    .box_level ul,.box_price ul{font-size: 45px;}
+    .farmer-title h3 {
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .logo a ,.logo button{
+        margin-right: 27px;
+        left: 24%;
+    }
+    .discountsImg h2,
+    .orangeImg h2,
+    .boxImg h2,
+    .farmerImg h2,
+    .aboutImg h2 {
+        font-size: 90px;
+        width: 370px;  
+    }
+    .orange_img{
+        float:none;
+        margin: auto;
+    }
+    .orange_intro{
+        float:none;
+        margin: 20px auto;
+    }
+    .box{flex-wrap: wrap;}
+    .boxPicPos {
+        width: 100%;
+    }
+    .boxPic {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .box_level{
+        margin-left: 25%;
+        margin-top: 80px;
+    } 
+    .box_price{
+        margin-left: 20px;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .logo,
+    .menu {
+        width: 100%;
+        height: 50vh;
+    }
+    .logo h1 {
+        font-size: 100px;
+    }
+    .logo h2 {
+        font-size: 65px;
+    }
+    .logo a ,.logo button{ 
+        top: 70%;
+        left: 26%;
+    }
+    .fa-4x {
+        font-size: 55px !important;
+    }
+    #showinfo {
+        position: absolute;
+        top: 85%;
+        font-size: 25px;
+    }
+
+    .menu_content h2 {
+        font-size: 30px;
+        top: 4vh;
+    }
+    .menu_content span {
+        font-size: 15px;
+        top: 7vh;
+    }
+    .menu_icon { 
+        width: 50px;
+        height: 50px;
+        top: 5vh;
+    }
+    .discountsImg,
+    .orangeImg,
+    .boxImg,
+    .farmerImg,
+    .aboutImg {
+        width: 100%;
+        height: 50vh;
+        position: static;
+        float: none;
+    }
+    .programContent,
+    .orangeContent,
+    .boxContent,
+    .farmerContent,
+    .aboutContent {
+        width: 100%;
+        position: relative;
+        left: 0;
+        float: none;
+    }
+    .close-btn {
+        background-color: white;
+        text-align: center;
+        line-height: 40px !important;
+    }
+    .programA h4,
+    .programB h4 {
+        margin-top: 50px;
+    }
+    .level ul,
+    .price ul {
+        margin-bottom: 50px;
+    }
+    .box_level{
+        margin-left: 30%;
+    } 
+    .farmerContent{
+        margin-top: 20px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .box_level{
+        margin-left: 27%;
+    } 
+
+}
+@media screen and (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 80px;
+        top: 50%;
+        left: 20%;
+        
+    }
+    .logo h2 {
+        font-size: 60px;
+        top: 20%;
+        left: 10%;
+    }
+    .logo a ,.logo button{
+        margin-right: 20px;
+        top: 70%;
+        left: 20%;
+    }
+    .fa-4x {
+        font-size: 30px !important;
+    }
+    #showinfo {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        font-size: 15px;
+        width: 100%;
+        padding-left:0px;
+    }
+    .menu_content h2 {
+        font-size: 20px;
+        left: 150px;
+    }
+    .menu_content span {
+        font-size: 15px;
+        left: 150px;
+    }
+    .menu_icon { 
+        width: 40px;
+        height: 40px;
+        top: 5vh;
+    }
+    .copyRight {
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    .trademark {
+        position: absolute;
+        bottom:9px;
+        left:10px;
+    }
+    .copyRight2018{
+        bottom:9px;
+        right:20px;
+    }
+    .discountsImg h2,
+    .orangeImg h2,
+    .boxImg h2,
+    .farmerImg h2,
+    .aboutImg h2 {
+        font-size: 70px;
+        width: 300px;
+    }
+    .programA h4,
+    .programB h4 {
+        font-size: 40px;
+    }
+    .boxnum{
+        top: 10px;
+        font-size: 30px;
+    }
+    .programB h5 {
+        font-size:30px;
+        margin-top: 15px;
+    }
+    .programB p {
+        font-size: 25px;
+        padding-top: 10px;
+    }    
+    .level ul,
+    .price ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 27px;
+    }
+    .orangeContent h3 {
+        font-size: 50px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .orange_intro {
+        width: 350px;
+    }
+    .orange_intro h4 {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+    .orange_intro p {
+        font-size: 25px;
+    }
+    .Compare {
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        height: 100px;
+    }
+    .box_level ul,.box_price ul{font-size:25px;}
+    .box_level{
+        margin-left: 13%;
+    } 
+    .swiper-container {
+        width: 80%;
+      }
+      .farmer-title h3 {
+        font-size: 35px;
+        margin: 10px 0 10px 10px;
+    }
+    .schedule h4 {
+        font-size: 25px;
+    }
+    .schedule p {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .aboutContent h3 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .aboutContent h4 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .aboutContent p {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+    .ph_home i, .connection a ,.phonenum {
+        margin-bottom: 10px;
+    }
+    
+
+}

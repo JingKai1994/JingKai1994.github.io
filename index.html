@@ -25,6 +25,9 @@
     <!-- swiper輪播效果 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
 
+    <link rel="stylesheet" href="css/mimic.min.css" type="text/css">
+
+    <link rel="stylesheet" href="css/glowing.css" />
 </head>
 
 <body>
@@ -34,15 +37,15 @@
     <div class="homepage">
         <div class="logo">
             <h2>歡迎來到</h2>
-            <h1>LOGO</h1>
+            <h1 class="animated boomerang">橘子園</h1>
 
             <!-- 聯絡資訊 -->
 
-            <a href="" class="fab fa-facebook fa-4x" data-toggle="tooltip" title="Facebook" style="color:black"></a>
-            <a href="" class="fab fa-instagram fa-4x" data-toggle="tooltip" title="Instagram" style="color:black"></a>
-            <a href="" class="fab fa-line fa-4x" data-toggle="tooltip" title="Line" style="color:black"></a>
-            <button class="fas fa-phone-square fa-4x" data-toggle="tooltip" title="Phone" style="color:black" onclick="showphone()"></button>
-            <button class="fas fa-home fa-4x informat" data-toggle="tooltip" title="Address" style="color:black" onclick="showaddress()"></button>
+            <a href="" class="fab fa-facebook fa-4x glowing orange" data-toggle="tooltip" title="Facebook" style="color:black"></a>
+            <a href="" class="fab fa-instagram fa-4x glowing orange" data-toggle="tooltip" title="Instagram" style="color:black"></a>
+            <a href="" class="fab fa-line fa-4x glowing orange" data-toggle="tooltip" title="Line" style="color:black"></a>
+            <a href="" class="fas fa-phone-square fa-4x glowing orange" data-toggle="tooltip" title="Phone" style="color:black" onclick="showphone()"></a>
+            <a href="" class="fas fa-home fa-4x informat glowing orange" data-toggle="tooltip" title="Address" style="color:black" onclick="showaddress()"></a>
             <div id="showinfo"></div>
         </div>
 
@@ -313,9 +316,11 @@
                     </div>
 
                 </div>
+                <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+
             </div>
 
             <!-- 活動詳細內容 : 假日小農 -->
@@ -429,7 +434,8 @@
 
 
     <!-- jquery.boostrap -->
-    <script type="text/javascript " src="js/jquery-1.11.3-min.js "></script>
+    <script src="js/jquery-1.11.3-min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
@@ -446,6 +452,8 @@
 
     <!-- imgLiquid -->
     <script src="js/imgLiquid-min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.backgroundMove.js"></script>
 
     <script>
         // swiper初始設定
@@ -465,8 +473,8 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            observer: true,         //修改swiper自己或子元素時，自動初始化swiper
-            observeParents: true,   //修改swiper的父元素時，自動初始化swiper
+            observer: true, //修改swiper自己或子元素時，自動初始化swiper
+            observeParents: true, //修改swiper的父元素時，自動初始化swiper
         });
 
         //imgLiquid初始設定
@@ -474,6 +482,13 @@
             $(".menu_icon").imgLiquid();
             $(".swiper-slide").imgLiquid();
         });
+
+
+        $(function () {
+            $('.logo').backgroundMove({
+                movementStrength: '55'
+            });
+        })
     </script>
 
 </body>

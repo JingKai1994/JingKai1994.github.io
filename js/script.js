@@ -85,8 +85,6 @@ $(document).ready(function () {
 
     });
 
-
-
     //背景視差
 
     var lFollowX = 0,
@@ -124,7 +122,6 @@ $(document).ready(function () {
 });
 
 //首頁點擊phone,home出現資訊
-
 function showphone() {
     document.getElementById("showinfo").innerHTML = "04-12345678";
 }

@@ -85,15 +85,7 @@ $(document).ready(function () {
 
     });
 
-    //首頁點擊phone,home出現資訊
 
-    function showphone() {
-        document.getElementById("showinfo").innerHTML = "04-12345678";
-    }
-
-    function showaddress() {
-        document.getElementById("showinfo").innerHTML = "台中市豐原區水源路中坑巷3號";
-    }
 
     //背景視差
 
@@ -130,3 +122,13 @@ $(document).ready(function () {
     moveBackground();
 
 });
+
+//首頁點擊phone,home出現資訊
+
+function showphone() {
+    document.getElementById("showinfo").innerHTML = "04-12345678";
+}
+
+function showaddress() {
+    document.getElementById("showinfo").innerHTML = "台中市豐原區水源路中坑巷3號";
+}

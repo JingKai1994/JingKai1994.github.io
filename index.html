@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -32,26 +32,44 @@
 
 <body>
 
+    <div id="preloader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
     <!-- 首頁 : 左邊LOGO 右邊Menu-->
 
     <div class="homepage">
         <div class="logo">
             <h2>歡迎來到</h2>
-            <h1 class="animated boomerang">橘子園</h1>
+            <h1>橘子園</h1>
 
             <!-- 聯絡資訊 -->
-
-            <a href="" class="fab fa-facebook fa-4x glowing orange" data-toggle="tooltip" title="Facebook" style="color:black"></a>
-            <a href="" class="fab fa-instagram fa-4x glowing orange" data-toggle="tooltip" title="Instagram" style="color:black"></a>
-            <a href="" class="fab fa-line fa-4x glowing orange" data-toggle="tooltip" title="Line" style="color:black"></a>
-            <a href="" class="fas fa-phone-square fa-4x glowing orange" data-toggle="tooltip" title="Phone" style="color:black" onclick="showphone()"></a>
-            <a href="" class="fas fa-home fa-4x informat glowing orange" data-toggle="tooltip" title="Address" style="color:black" onclick="showaddress()"></a>
+            <div class="socialicon">
+                <a href="" class="fab fa-facebook fa-4x glowing orange" data-toggle="tooltip" title="Facebook" style="color:black"></a>
+                <a href="" class="fab fa-instagram fa-4x glowing orange" data-toggle="tooltip" title="Instagram" style="color:black"></a>
+                <a href="" class="fab fa-line fa-4x glowing orange" data-toggle="tooltip" title="Line" style="color:black"></a>
+                <button href="" class="fas fa-phone-square fa-4x glowing orange" data-toggle="tooltip" title="Phone" style="color:black"
+                    onclick="showphone()"></button>
+                <button href="" class="fas fa-home fa-4x glowing orange" data-toggle="tooltip" title="Address" style="color:black;" onclick="showaddress()"></button>
+            </div>
             <div id="showinfo"></div>
         </div>
 
         <!-- 選單 -->
 
         <div class="menu">
+            <div class="activity menu_content">
+                <div class="menu_icon icon4">
+                    <img src="img/icon/farmer.png" alt="farmer">
+                </div>
+                <h2>假日小農</h2>
+                <span>You can be a Farmer,too</span>
+            </div>
             <div class="discounts menu_content">
                 <div class="menu_icon icon1">
                     <img src="img/icon/discount.png" alt="discounts">
@@ -59,34 +77,34 @@
                 <h2>優惠方案</h2>
                 <span>Discounts</span>
             </div>
-            <div class="oranges menu_content">
-                <div class="menu_icon icon2">
-                    <img src="img/icon/orange.png" alt="">
-                </div>
-                <h2>橘子分類</h2>
-                <span>Varieties Of Oranges</span>
-            </div>
             <div class="gift menu_content">
                 <div class="menu_icon icon3">
-                    <img src="img/icon/box.png" alt="">
+                    <img src="img/icon/box.png" alt="gift">
                 </div>
                 <h2>禮盒樣式</h2>
                 <span>Gift Boxes</span>
             </div>
-            <div class="activity menu_content">
-                <div class="menu_icon icon4">
-                    <img src="img/icon/farmer.png" alt="">
+            <div class="oranges menu_content">
+                <div class="menu_icon icon2">
+                    <img src="img/icon/orange.png" alt="oranges">
                 </div>
-                <h2>假日小農</h2>
-                <span>You can be a Farmer,too</span>
+                <h2>橘子分類</h2>
+                <span>Varieties Of Oranges</span>
             </div>
             <div class="about menu_content">
                 <div class="menu_icon icon5">
-                    <img src="img/icon/info.png" alt="">
+                    <img src="img/icon/info.png" alt="about">
                 </div>
                 <h2>關於我們</h2>
                 <span>About Us</span>
             </div>
+        </div>
+    </div>
+
+    <div class="parallaxBg">
+        <div class="newlogo">
+            <h2>歡迎來到</h2>
+            <h1 class="animated boomerang">橘子園</h1>
         </div>
     </div>
 
@@ -366,11 +384,11 @@
                     ◎其他注意事項：
                 </h4>
                 <p>
-                    1. 請於報名後三日內匯款，並提供帳號後五碼核對，確認無誤即 完成報名程序。
+                    1. 請於報名後三日內匯款，並提供帳號後五碼核對，確認無誤即完成報名程序。
                     <br>2. 貴重物品請隨身攜帶。
                     <br>3. 如有身體不適請自備個人隨身藥品：如暈車藥、感冒藥、防蚊蟲液 ...等。
                     <br>4. 請勿攜帶寵物及危險物品參與行程，感謝您的配合。
-                    <br>5. 請於規定時間內準時集合，行程中如旅客因個人因素私自脫隊或集合 不到，不予退費。
+                    <br>5. 請於規定時間內準時集合，行程中如旅客因個人因素私自脫隊或集合不到，不予退費。
                     <br>6. 活動洽詢專線：04-12345678(一梯次最多10人，額滿為止)。
                 </p>
             </div>
@@ -453,8 +471,6 @@
     <!-- imgLiquid -->
     <script src="js/imgLiquid-min.js"></script>
 
-    <script type="text/javascript" src="js/jquery.backgroundMove.js"></script>
-
     <script>
         // swiper初始設定
         var swiper = new Swiper('.swiper-container', {
@@ -482,13 +498,6 @@
             $(".menu_icon").imgLiquid();
             $(".swiper-slide").imgLiquid();
         });
-
-
-        $(function () {
-            $('.logo').backgroundMove({
-                movementStrength: '55'
-            });
-        })
     </script>
 
 </body>

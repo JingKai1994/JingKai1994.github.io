@@ -25,7 +25,6 @@
     <!-- swiper輪播效果 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
 
-    <link rel="stylesheet" href="css/mimic.min.css" type="text/css">
 
     <link rel="stylesheet" href="css/glowing.css" />
 </head>
@@ -46,15 +45,16 @@
     <div class="homepage">
         <div class="logo">
             <h2>歡迎來到</h2>
-            <h1>橘子園</h1>
+            <h1 class="name">橘子園
+                <span>點我看景色</span>
+            </h1>
 
             <!-- 聯絡資訊 -->
             <div class="socialicon">
                 <a href="" class="fab fa-facebook fa-4x glowing orange" data-toggle="tooltip" title="Facebook" style="color:black"></a>
                 <a href="" class="fab fa-instagram fa-4x glowing orange" data-toggle="tooltip" title="Instagram" style="color:black"></a>
                 <a href="" class="fab fa-line fa-4x glowing orange" data-toggle="tooltip" title="Line" style="color:black"></a>
-                <button class="fas fa-phone-square fa-4x glowing orange" data-toggle="tooltip" title="Phone" style="color:black"
-                    onclick="showphone()"></button>
+                <button class="fas fa-phone-square fa-4x glowing orange" data-toggle="tooltip" title="Phone" style="color:black" onclick="showphone()"></button>
                 <button class="fas fa-home fa-4x glowing orange" data-toggle="tooltip" title="Address" style="color:black;" onclick="showaddress()"></button>
             </div>
             <div id="showinfo"></div>
@@ -102,10 +102,28 @@
     </div>
 
     <div class="parallaxBg">
-        <div class="newlogo">
-            <h2>歡迎來到</h2>
-            <h1 class="animated boomerang">橘子園</h1>
+        <div class="welcome" id="welcome">
+            <div class="title">
+                <h2>歡迎來到</h2>
+                <h1 class="boomerang">橘子園</h1>
+            </div>
+            <div class="introView">
+                <h2>我們的景色優美</h2>
+            </div>
         </div>
+        <div class="nightbg" id="nightbg">
+            <div class="introNight">
+                <h2>夜景更美…</h2>
+            </div>
+        </div>
+        <div class="direction">
+            <span class="prev" onclick="prev()">白天</span>
+            <span>/</span>
+            <span class="next" onclick="next()">夜晚</span>
+        </div>
+        <!-- <div class="prev fas fa-chevron-circle-left fa-4x"></div>
+        <div class="next fas fa-chevron-circle-right fa-4x"></div> -->
+
     </div>
 
     <!-- 關閉按鈕 -->
@@ -321,10 +339,10 @@
                         <img src="img/img/活動4.jpg" alt="活動照片" srcset="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/img/餐廳 (1).jpg" alt="活動照片" srcset="">
+                        <img src="img/img/餐廳 (1).jpg" alt="活動照片" srcset=""> 123
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/img/餐廳 (2).jpg" alt="活動照片" srcset="">
+                        <img src="img/img/餐廳 (2).jpg" alt="活動照片" srcset=""> 456
                     </div>
                     <div class="swiper-slide">
                         <img src="img/img/餐廳 (3).jpg" alt="活動照片" srcset="">

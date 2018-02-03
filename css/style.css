@@ -67,61 +67,6 @@ h4 {
     right: 0;
 }
 
-@-webkit-keyframes loader {
-    0%,
-    10%,
-    100% {
-        width: 40px;
-        height: 40px;
-    }
-    65% {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-@-webkit-keyframes loaderBlock {
-    0%,
-    30% {
-        -webkit-transform: rotate(0);
-        -moz-transform: rotate(0);
-        -ms-transform: rotate(0);
-        -o-transform: rotate(0);
-        transform: rotate(0);
-    }
-    55% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-}
-
-@-webkit-keyframes loaderBlockInverse {
-    0%,
-    20% {
-        -webkit-transform: rotate(0);
-        -moz-transform: rotate(0);
-        -ms-transform: rotate(0);
-        -o-transform: rotate(0);
-        transform: rotate(0);
-    }
-    55% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-    }
-}
-
 @keyframes loader {
     0%,
     10%,
@@ -210,16 +155,13 @@ h4 {
 }
 
 .parallaxBg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/bg/背景.jpg') no-repeat fixed;
-    background-size: cover;
-    background-position: center;
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-.newlogo {
+.welcome {
     width: 100%;
     height: 100vh;
     display: inline-block;
@@ -227,9 +169,163 @@ h4 {
     position: relative;
     overflow: hidden;
     z-index: 10;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/bg/背景.jpg') no-repeat fixed;
+    background: url('../img/bg/背景.jpg');
     background-size: cover;
     background-position: center;
+    animation: bgChange 12s ease-in-out 1 0s;
+}
+.nightbg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: url('../img/bg/夜景.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: bgEasein 1s ease-in 1;
+    animation-delay: 12s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes bgChange{
+    0%{
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    5% {
+		opacity: 1;
+    }
+    90%{
+        animation-timing-function: ease-out;
+		opacity: 1;
+    }
+    100% {
+		opacity: 0;
+	}
+}
+@keyframes bgEasein{
+    from{
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* 視差背景大標特效 */
+.boomerang {
+    animation-fill-mode: forwards;
+    animation-name: boomerang;
+    animation-duration: 6s;
+}
+@keyframes boomerang {
+    5% {
+        z-index: 1;
+        transform: rotate(-20deg);
+    }
+    17.5% {
+        z-index: 1;
+        transform: translate(220%, -55%) scale(0.5) rotate(-200deg);
+    }
+    37% {
+        z-index: -1;
+    }
+    37.5% {
+        transform: translate(-200%, 55%) scale(0.9) rotate(-860deg);
+    }
+    40% {
+        z-index: 1;
+    }
+    45% {
+        z-index: 1;
+        transform: translate(0%, 0%) rotate(10deg);
+    }
+    60%{
+        transform: translate(-50%, -50%);
+    }
+    75%{
+        opacity: 0.8;
+        animation-timing-function: ease-out;
+    }
+    100%{
+        opacity: 0;
+    } 
+}
+
+/* 視差背景次標特效 */
+.title h2, .introView h2, .introNight h2{
+    animation: textslider 18s ease-in-out 1 0s;
+}
+@keyframes textslider{
+    0%{
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    15% {
+		opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+        animation-timing-function: ease-out;
+    }
+    30% {
+		opacity: 0;
+    }
+    100% {
+		opacity: 0;
+	}
+}
+
+.name {
+    font-size: 130px;
+    top: 55%;
+    left: 29%;
+    letter-spacing: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+	transition: color 0.5s;
+}
+
+.name:hover {
+	color: #f0b05d;
+}
+
+.name::before {
+	content: '';
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	top: 50%;
+	margin-top: -18px;
+	left: -10%;
+	z-index: -1;
+	background: #F9F9F9;
+	transform: rotate3d(0,0,1,45deg) scale3d(0,1,1);
+	transition: transform 0.5s;
+}
+
+.name:hover::before {
+	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+}
+
+.name span {
+	font-size: 20%;
+	font-weight: 400;
+	position: absolute;
+	right: 15px;
+	color: #33b30c;
+	bottom: 0;
+	opacity: 0;
+	transform: translate3d(-10px,-10px,0);
+    transition: transform 0.5s, opacity 0.5s;
+    text-shadow: 0 0 10px rgba(30, 30, 30, 1.50);
+}
+
+.name:hover span {
+	opacity: 1;
+	transform: translate3d(0,0,0);
 }
 
 /* 背景暗化 */
@@ -253,10 +349,11 @@ h4 {
 
 /* logo大標題 次標顏色.陰影*/
 
-.logo h1,
+.name,
 .logo h2,
-.newlogo h1,
-.newlogo h2 {
+.welcome h1,
+.welcome h2,
+.introNight h2 {
     position: absolute;
     color: white;
     text-shadow: 0 2px 10px rgba(39, 40, 34, 1.50);
@@ -265,16 +362,15 @@ h4 {
 
 /* logo大標題設定 */
 
-.logo h1 {
-    font-size: 130px;
-    top: 55%;
-    left: 29%;
-    letter-spacing: 10px;
-    transform: translateY(-50%);
+/* .logo small{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    letter-spacing: 2px;
     cursor: pointer;
-}
-
-.newlogo h1 {
+} */
+.title h1 {
     font-size: 130px;
     top: 50%;
     left: 50%;
@@ -291,11 +387,53 @@ h4 {
     transform: translateY(-50%);
 }
 
-.newlogo h2 {
+.title h2 {
     font-size: 85px;
     top: 25%;
     left: 40%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.introView h2{
+    font-size: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 6s;
+    opacity: 0;
+}
+.introNight h2{
+    font-size: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 12s;
+    opacity: 0;
+}
+.direction{
+    position: absolute;
+    top:85%;
+    transform: translateX(-50%);
+    z-index: 15;
+    color: #fff;
+    left:50%;
+    font-size: 30px;
+    text-shadow: 0 2px 10px rgba(39, 40, 34, 1.50);
+    cursor: pointer;
+    opacity: 0;
+    animation: showdir 1s ease-in 1;
+    animation-delay: 18s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes showdir{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 /* 首頁圖示 */
@@ -400,11 +538,6 @@ h4 {
     transition: all 0.3s;
 }
 
-/* 
-.menu>div:hover span {
-    border-bottom: solid 1px;
-} */
-
 .menu>div:hover span {
     border-bottom: solid 1px;
 }
@@ -417,7 +550,7 @@ h4 {
 
 .discounts,
 .discountsImg {
-    background-image: url('../img/bg/優惠1.jpg');
+    background-image: url('../img/bg/優惠.jpg');
     background-position: 30% 40%;
 }
 
@@ -475,6 +608,7 @@ h4 {
     position: fixed;
     right: 2%;
     top: 10px;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 1.5);
 }
 
 /* footer 所有權 */

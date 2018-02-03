@@ -129,3 +129,11 @@ function showphone() {
 function showaddress() {
     document.getElementById("showinfo").innerHTML = "台中市豐原區水源路中坑巷3號";
 }
+function prev() {
+    document.getElementById("welcome").style.visibility = "visible";
+    document.getElementById("nightbg").style.visibility = "hidden";
+}
+function next() {
+    document.getElementById("welcome").style.visibility = "hidden";
+    document.getElementById("nightbg").style.visibility = "visible";
+}
